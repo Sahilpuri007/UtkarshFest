@@ -25,6 +25,7 @@ public class SplashActivity extends Activity {
 
 
         // added some comment
+        // added some more comment
 
     }
 }
