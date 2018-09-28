@@ -22,5 +22,10 @@ public class SplashActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         new Handler().postDelayed(new Splash(), (long) 3000);
+
+
+        // added some comment
+        // added some more comment
+
     }
 }
