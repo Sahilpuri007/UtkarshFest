@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "958724188463",
+    "firebase_url": "https://utkarsh-fest-2108.firebaseio.com",
+    "project_id": "utkarsh-fest-2108",
+    "storage_bucket": "utkarsh-fest-2108.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:958724188463:android:20998fdbedee7c49",
+        "android_client_info": {
+          "package_name": "com.fest.utkarsh"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "958724188463-ilue6quk9n6mvv3jtcbr9ic7lg39ev46.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fest.utkarsh",
+            "certificate_hash": "3609a21ed0baf80ebdd3d979c616f657e35f059f"
+          }
+        },
+        {
+          "client_id": "958724188463-93rdgvtamh847kdnio9d1b0nbl6aocpn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMMV1peIZ8BvHn_D514A8styLT7u1Lx3E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "958724188463-93rdgvtamh847kdnio9d1b0nbl6aocpn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
