@@ -1,4 +1,4 @@
-package com.fest.utkarsh.Utils;
+package com.fest.utkarsh.utils;
 
 import android.content.Context;
 import android.content.SharedPreferences;

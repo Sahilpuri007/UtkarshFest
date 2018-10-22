@@ -3,7 +3,6 @@ package com.fest.utkarsh;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.provider.SyncStateContract;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -11,7 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.fest.utkarsh.Utils.SharedPrefManager;
+import com.fest.utkarsh.utils.SharedPrefManager;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;

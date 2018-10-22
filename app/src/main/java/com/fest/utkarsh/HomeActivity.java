@@ -19,7 +19,7 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.fest.utkarsh.Utils.SharedPrefManager;
+import com.fest.utkarsh.utils.SharedPrefManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -127,17 +127,22 @@ public class HomeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_atlantus) {
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+            Intent intent = new Intent(HomeActivity.this, AtlantusTabActivity.class);
+            startActivity(intent);
 
-        } else if (id == R.id.nav_slideshow) {
-
+        } else if (id == R.id.nav_cultural) {
+            Intent intent = new Intent(HomeActivity.this, CulturalTabActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_dexteria) {
+            Intent intent = new Intent(HomeActivity.this, DexteriaTabActivity.class);
+            startActivity(intent);
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_sign_out) {
             signOut();
         }
 
