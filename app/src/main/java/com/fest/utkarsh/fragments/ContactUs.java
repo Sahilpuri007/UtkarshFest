@@ -1,4 +1,4 @@
-package com.fest.utkarsh.fragments.atlantus;
+package com.fest.utkarsh.fragments;
 
 
 import android.os.Bundle;
@@ -12,10 +12,10 @@ import com.fest.utkarsh.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class Dota extends Fragment {
+public class ContactUs extends Fragment {
 
 
-    public Dota() {
+    public ContactUs() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class Dota extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_dota, container, false);
+        return inflater.inflate(R.layout.fragment_about_us, container, false);
     }
 
 }

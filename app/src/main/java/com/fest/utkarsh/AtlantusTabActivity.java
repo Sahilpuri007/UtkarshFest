@@ -9,9 +9,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
+import com.fest.utkarsh.fragments.atlantus.CsGo;
 import com.fest.utkarsh.fragments.atlantus.ChromeRun;
 import com.fest.utkarsh.fragments.atlantus.Cs;
-import com.fest.utkarsh.fragments.atlantus.Dota;
+import com.fest.utkarsh.fragments.atlantus.Pubg;
 import com.fest.utkarsh.fragments.atlantus.Fifa;
 import com.fest.utkarsh.fragments.atlantus.MarioMod;
 import com.fest.utkarsh.fragments.atlantus.Tekken;
@@ -41,9 +42,10 @@ public class AtlantusTabActivity extends AppCompatActivity {
     }
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new ChromeRun(), "Chrome Run");
-        adapter.addFragment(new Cs(), "Counter Strike");
-        adapter.addFragment(new Dota(), "DOTA");
+        //adapter.addFragment(new ChromeRun(), "Chrome Run");
+        adapter.addFragment(new Cs(), "Counter Strike 1.6");
+        adapter.addFragment(new CsGo(), "Counter Strike GO");
+        adapter.addFragment(new Pubg(), "PUBG");
         adapter.addFragment(new Fifa(), "FIFA");
         adapter.addFragment(new MarioMod(), "Mario Mod");
         adapter.addFragment(new Tekken(), "Tekken");

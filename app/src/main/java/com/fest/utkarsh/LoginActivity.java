@@ -166,9 +166,10 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         FirebaseUser currentUser = mAuth.getCurrentUser();
         updateUI(currentUser);
     }
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
-    }
+        }
     @Override
     public void onClick(View v) {
         int i = v.getId();

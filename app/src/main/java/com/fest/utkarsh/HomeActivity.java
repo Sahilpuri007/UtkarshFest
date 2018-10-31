@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +22,14 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.fest.utkarsh.fragments.AboutApp;
+import com.fest.utkarsh.fragments.AboutUs;
+import com.fest.utkarsh.fragments.ContactUs;
+import com.fest.utkarsh.fragments.EventsFragment;
+import com.fest.utkarsh.fragments.FbFragment;
+import com.fest.utkarsh.fragments.HomeFragment;
+import com.fest.utkarsh.fragments.RegEvent;
+import com.fest.utkarsh.fragments.WebsiteFragment;
 import com.fest.utkarsh.utils.SharedPrefManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -29,7 +40,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.squareup.picasso.Picasso;
 
 public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener  {
 
     Context mContext = this;
     private String mUsername, mEmail;
@@ -38,22 +49,25 @@ public class HomeActivity extends AppCompatActivity
     private TextView mFullNameTextView, mEmailTextView;
     private GoogleSignInClient mGoogleSignInClient;
     private FirebaseAuth mAuth;
+    private Fragment fragment = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+        fragment=new HomeFragment();
+        fragManag();
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        //FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        //fab.setOnClickListener(new View.OnClickListener() {
+          //  @Override
+            //public void onClick(View view) {
+              //  Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                //        .setAction("Action", null).show();
+            //}
+        //});
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -127,25 +141,36 @@ public class HomeActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_atlantus) {
+        if (id == R.id.nav_home) {
             // Handle the camera action
-            Intent intent = new Intent(HomeActivity.this, AtlantusTabActivity.class);
-            startActivity(intent);
+            fragment=new HomeFragment();
 
-        } else if (id == R.id.nav_cultural) {
-            Intent intent = new Intent(HomeActivity.this, CulturalTabActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_dexteria) {
-            Intent intent = new Intent(HomeActivity.this, DexteriaTabActivity.class);
-            startActivity(intent);
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_events) {
+            fragment=new EventsFragment();
+        }else if (id == R.id.nav_register) {
 
-        } else if (id == R.id.nav_share) {
+            fragment = new RegEvent();
+        } else if (id == R.id.nav_videos) {
+            Intent intent = new Intent(HomeActivity.this, VideoActivity.class);
+            startActivity(intent);
+        } else if (id == R.id.nav_website) {
+            fragment=new WebsiteFragment();
 
-        } else if (id == R.id.nav_sign_out) {
+        }else if (id == R.id.nav_fb) {
+            fragment=new FbFragment();
+
+        } else if (id == R.id.nav_about_app) {
+            fragment=new AboutApp();
+        }
+        else if (id == R.id.nav_about_us) {
+            fragment=new AboutUs();
+        }
+        else if (id == R.id.nav_contact_us) {
+            fragment=new ContactUs();
+        }else if (id == R.id.nav_sign_out) {
             signOut();
         }
-
+        fragManag();
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
@@ -166,14 +191,21 @@ public class HomeActivity extends AppCompatActivity
     }
     private void signOut() {
         mAuth.signOut();
-        //
         mGoogleSignInClient.signOut().addOnCompleteListener(this,
                 new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
                         Intent intent = new Intent(HomeActivity.this, LoginActivity.class);
                         startActivity(intent);
+                        //sharedPrefManager.clear();
                     }
                 });
+    }
+    public void fragManag(){
+        FragmentManager fragmentManager=getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction=fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.content_main,fragment);
+        fragmentTransaction.commit();
+
     }
 }

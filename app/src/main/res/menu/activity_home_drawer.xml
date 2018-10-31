@@ -5,34 +5,54 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_atlantus"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Atlantus" />
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
         <item
-            android:id="@+id/nav_cultural"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Cultural" />
+            android:id="@+id/nav_events"
+            android:icon="@drawable/ic_event_note_black_24dp"
+            android:title="Events" />
         <item
-            android:id="@+id/nav_dexteria"
+            android:id="@+id/nav_register"
+            android:icon="@drawable/ic_person_add_black_24dp"
+            android:title="Register" />
+        <item
+            android:id="@+id/nav_videos"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Dexteria" />
+            android:title="Videos" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_website"
+            android:icon="@drawable/ic_web_black_24dp"
+            android:title="Websites" />
+        <item
+            android:id="@+id/nav_fb"
+            android:icon="@drawable/ic_flogo_rgb_hex_blk_72"
+            android:title="Facebook Page" />
     </group>
 
     <item android:title="Communicate">
         <menu>
             <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+                android:id="@+id/nav_about_app"
+                android:icon="@drawable/ic_info_black_24dp"
+                android:title="About App" />
             <item
-                android:id="@+id/nav_sign_out"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Sign Out" />
+                android:id="@+id/nav_about_us"
+                android:icon="@drawable/ic_info_outline_black_24dp"
+                android:title="About Us" />
+            <item
+                android:id="@+id/nav_contact_us"
+                android:icon="@drawable/ic_perm_device_information_black_24dp"
+                android:title="Contact Us" />
         </menu>
     </item>
+            <item android:title="Actions">
+                <menu>
+                <item
+                    android:id="@+id/nav_sign_out"
+                    android:icon="@drawable/ic_menu_send"
+                    android:title="Sign Out" />
 
+                </menu>
+            </item>
 </menu>

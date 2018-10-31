@@ -9,12 +9,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 
-import com.fest.utkarsh.fragments.atlantus.ChromeRun;
-import com.fest.utkarsh.fragments.atlantus.Cs;
-import com.fest.utkarsh.fragments.atlantus.Dota;
-import com.fest.utkarsh.fragments.atlantus.Fifa;
-import com.fest.utkarsh.fragments.atlantus.MarioMod;
-import com.fest.utkarsh.fragments.atlantus.Tekken;
 import com.fest.utkarsh.fragments.cultural.Asthetica;
 import com.fest.utkarsh.fragments.cultural.DanceOff;
 import com.fest.utkarsh.fragments.cultural.Dharohar;
