@@ -1,29 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.RegEvent">
+    tools:context=".RegEventActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_registeration"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:layout_scrollFlags="scroll|enterAlways"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+
+    <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="13dp"
-        android:text="Event Registration"
-        android:textAppearance="@style/TextAppearance.AppCompat.Button"
-        android:textSize="24sp" />
+        android:layout_below="@+id/toolbar_registeration"
+        android:src="@drawable/logo_utl"
+        android:id="@+id/img_u"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/l_one"
+        android:layout_below="@+id/img_u"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/logo_at" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:fontFamily="casual"
+            android:text="Event Registration"
+            android:textAlignment="center"
+            android:textColor="@color/navigationBarColor"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:src="@drawable/logo_dx" />
+    </LinearLayout>
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignStart="@+id/textView"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="-52dp"
-        android:layout_marginTop="53dp">
+        android:layout_below="@+id/l_one"
+        >
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -107,6 +140,7 @@
                 android:fontFamily="casual"
                 android:padding="5dp"
                 android:text="Choose Category:-"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -131,11 +165,14 @@
                 android:layout_below="@+id/catSpinner"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentLeft="true"
-                android:layout_margin="5dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="5dp"
                 android:fontFamily="casual"
                 android:padding="5dp"
                 android:text="Choose Event:-"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 
@@ -170,6 +207,7 @@
                 android:fontFamily="casual"
                 android:padding="5dp"
                 android:text="Members:-"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:textStyle="bold" />
 

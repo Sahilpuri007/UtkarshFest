@@ -52,15 +52,56 @@
                 android:layout_margin="10dp"
                 android:layout_below="@+id/l_one"
                 />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/youtube_view"
                 android:orientation="vertical">
-
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:id="@+id/txtsdp"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center_vertical"
+                    android:fontFamily="serif-monospace"
+                    android:text="Star Night Teaser"
+                    android:textAlignment="center"
+                    android:textColor="@color/navigationBarColor"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/l_re"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logo_ut" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:text="Message By Mr. Shivjot"
+                        android:textAlignment="center"
+                        android:textColor="@color/windowBackground"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+                    <Button
+                        android:id="@+id/btn_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/rouned_corner_shadow"
+                        android:text="Play" />
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtsd"
                     android:layout_margin="10dp"
                     android:layout_gravity="center_vertical"
                     android:fontFamily="serif-monospace"
@@ -69,6 +110,7 @@
                     android:textColor="@color/navigationBarColor"
                     android:textSize="24sp"
                     android:textStyle="bold" />
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"

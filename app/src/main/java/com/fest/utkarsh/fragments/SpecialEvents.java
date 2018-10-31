@@ -1,4 +1,4 @@
-package com.fest.utkarsh.fragments.atlantus;
+package com.fest.utkarsh.fragments;
 
 
 import android.content.Intent;
@@ -16,11 +16,11 @@ import com.fest.utkarsh.RegEventActivity;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MarioMod extends Fragment {
+public class SpecialEvents extends Fragment {
 
     Button btnregister;
 
-    public MarioMod() {
+    public SpecialEvents() {
         // Required empty public constructor
     }
 
@@ -31,7 +31,7 @@ public class MarioMod extends Fragment {
         // Inflate the layout for this fragment
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().build();
         StrictMode.setThreadPolicy(policy);
-        View view = inflater.inflate(R.layout.fragment_mario_mod, container, false);
+        View view = inflater.inflate(R.layout.fragment_special_events, container, false);
         btnregister = (Button) view.findViewById(R.id.btn_one);
         btnregister.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,6 +42,6 @@ public class MarioMod extends Fragment {
 
             }
         });
-        return view;    }
+        return view;      }
 
 }

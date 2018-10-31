@@ -17,7 +17,7 @@ public class VideoActivity extends YouTubeBaseActivity implements YouTubePlayer.
 
     private static final int RECOVERY_DIALOG_REQUEST = 1;
     YouTubePlayerView youTubePlayerView;
-    Button btn1,btn2,btn3;
+    Button btn1,btn2,btn3,btn4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +25,7 @@ public class VideoActivity extends YouTubeBaseActivity implements YouTubePlayer.
         btn1 =(Button)findViewById(R.id.btn_one);
         btn2 =(Button)findViewById(R.id.btn_two);
         btn3 =(Button)findViewById(R.id.btn_three);
+        btn4 =(Button)findViewById(R.id.btn_four);
         youTubePlayerView = (YouTubePlayerView)findViewById(R.id.youtube_view);
         youTubePlayerView.initialize(PlayerConfig.API_KEY,this);
     }
@@ -47,6 +48,13 @@ public class VideoActivity extends YouTubeBaseActivity implements YouTubePlayer.
             @Override
             public void onClick(View v) {
                 youTubePlayer.loadVideo("4dm15pcLkb0");
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                youTubePlayer.loadVideo("sy82etvPqhA");
+
             }
         });
 

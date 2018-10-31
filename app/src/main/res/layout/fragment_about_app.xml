@@ -43,16 +43,176 @@
                     android:layout_height="75dp"
                     android:src="@drawable/logo_dx" />
             </LinearLayout>
-            <WebView
-                android:id="@+id/web_view"
-                android:layout_below="@id/l_one"
-                android:layout_margin="10dp"
-                android:padding="5dp"
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/l_one"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/textis"
+                android:fontFamily="casual"
+                android:text="@string/about_app"
+                android:textAlignment="center"
+                android:textColor="@color/navigationBarColor"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
+                android:id="@+id/aditya"
+                android:layout_below="@+id/textis"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="175dp"
+                android:layout_weight=".5"
+                android:src="@drawable/aditya" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="casual"
+                    android:text="Aditya Sud"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:fontFamily="casual"
+                    android:layout_weight="1"
+                    android:text="C.S.E. 7 th sem."
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="28sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="casual"
+                    android:text="adisud007@gmail.com"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/and"
+                android:layout_below="@+id/aditya"
                 android:layout_alignParentStart="true"
-                />
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="6dp"
+                android:fontFamily="casual"
+                android:text="AND"
+                android:textAlignment="center"
+                android:textColor="@color/navigationBarColor"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/sahil"
+                android:layout_below="@+id/and"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="175dp"
+                    android:layout_weight=".5"
+                    android:src="@drawable/sahil" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="casual"
+                        android:text="Sahil Puri"
+                        android:layout_weight="1"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:fontFamily="casual"
+                        android:layout_weight="1"
+                        android:text="C.S.E. 7 th sem."
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="casual"
+                        android:text="sahilpuri699@gmail.com"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="19sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+            <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textp"
+            android:layout_below="@+id/sahil"
+            android:layout_alignParentStart="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="6dp"
+            android:fontFamily="casual"
+            android:text="Image Editing Credits"
+            android:textAlignment="center"
+            android:textColor="@color/navigationBarColor"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textc"
+                android:layout_below="@+id/textp"
+                android:layout_alignParentStart="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="6dp"
+                android:fontFamily="casual"
+                android:text="Jatin, Akshay, Suman."
+                android:textAlignment="center"
+                android:textColor="@color/navigationBarColor"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
         </RelativeLayout>
     </ScrollView>
 

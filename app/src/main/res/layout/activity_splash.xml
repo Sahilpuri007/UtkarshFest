@@ -11,50 +11,13 @@
 
     <ImageView
         android:id="@+id/imageView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="304dp"
-        android:layout_marginEnd="56dp"
-        android:src="@drawable/logo_utl" />
-
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="-283dp"
-        android:src="@drawable/red_designx" />
-
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="388dp"
-        android:layout_weight="1"
-        android:padding="5dp"
-        android:src="@drawable/red_aperture" />
-
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="3dp"
-        android:layout_marginBottom="209dp"
-        android:src="@drawable/red_google_hunt" />
-
-    <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
-        android:layout_above="@+id/imageView6"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="-309dp"
-        android:src="@drawable/red_quibble" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="203dp"
+        android:src="@drawable/logo_ut" />
 
     <TextView
         android:id="@+id/textView"
@@ -63,12 +26,12 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginBottom="152dp"
+        android:layout_marginBottom="265dp"
         android:fontFamily="monospace"
         android:lineSpacingExtra="12sp"
-        android:text="Loading...."
+        android:text="Loading......"
         android:textAlignment="center"
-        android:textAllCaps="true"
+        android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         android:textColor="@color/windowBackground"
         android:textSize="18sp"

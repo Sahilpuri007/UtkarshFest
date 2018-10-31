@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -28,7 +26,7 @@ import com.fest.utkarsh.fragments.ContactUs;
 import com.fest.utkarsh.fragments.EventsFragment;
 import com.fest.utkarsh.fragments.FbFragment;
 import com.fest.utkarsh.fragments.HomeFragment;
-import com.fest.utkarsh.fragments.RegEvent;
+import com.fest.utkarsh.fragments.SpecialEvents;
 import com.fest.utkarsh.fragments.WebsiteFragment;
 import com.fest.utkarsh.utils.SharedPrefManager;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
@@ -147,9 +145,12 @@ public class HomeActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_events) {
             fragment=new EventsFragment();
+        }else if (id == R.id.nav_sp) {
+            fragment=new SpecialEvents();
         }else if (id == R.id.nav_register) {
 
-            fragment = new RegEvent();
+            Intent intent = new Intent(this,RegEventActivity.class);//what do you want to display next
+            startActivity(intent);
         } else if (id == R.id.nav_videos) {
             Intent intent = new Intent(HomeActivity.this, VideoActivity.class);
             startActivity(intent);

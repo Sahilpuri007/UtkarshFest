@@ -23,8 +23,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity"
-            android:theme="@style/MyMaterialTheme.Base"/>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/MyMaterialTheme.Base" />
         <activity
             android:name=".AtlantusTabActivity"
             android:theme="@style/MyMaterialTheme.Base" />
@@ -39,7 +40,11 @@
             android:theme="@style/AppTheme.YesActionBar" />
         <activity android:name=".DexPlayerActivity" />
         <activity android:name=".AtlPlayerActivity" />
-        <activity android:name=".VideoActivity"></activity>
+        <activity android:name=".VideoActivity" />
+        <activity
+            android:name=".RegEventActivity"
+            android:theme="@style/MyMaterialTheme.Base"/>
+
     </application>
 
 </manifest>

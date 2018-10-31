@@ -46,6 +46,12 @@ public class UtPlayerActivity extends YouTubeBaseActivity implements YouTubePlay
                 Toast.makeText(mContext,youTubeInitializationResult+"",Toast.LENGTH_LONG).show();
             }
         };*/
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(UtPlayerActivity.this, CulturalTabActivity.class);
+                startActivity(intent);            }
+        });
 
 
     }
@@ -53,18 +59,14 @@ public class UtPlayerActivity extends YouTubeBaseActivity implements YouTubePlay
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, final YouTubePlayer youTubePlayer, boolean b) {
 
+        youTubePlayer.cueVideo("W_1mBf6grzk");
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                youTubePlayer.cueVideo("XhgznIQRSII");
+                youTubePlayer.loadVideo("W_1mBf6grzk");
             }
         });
-        btn2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                youTubePlayer.cueVideo("xP2oM3te1c0");
-            }
-        });
+
     }
 
     @Override
