@@ -97,7 +97,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
             } else {
                 Log.e(TAG, "Login Unsuccessful. ");
-                Toast.makeText(this, "Login Unsuccessful", Toast.LENGTH_SHORT)
+                Toast.makeText(this, "Login Unsuccessful"+resultCode, Toast.LENGTH_SHORT)
                         .show();
             }
 

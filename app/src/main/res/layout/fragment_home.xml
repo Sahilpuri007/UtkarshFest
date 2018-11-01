@@ -142,7 +142,7 @@
                         android:layout_gravity="center_vertical"
                         android:layout_weight="1"
                         android:fontFamily="casual"
-                        android:text="APERTURE"
+                        android:text="ATLANTUS"
                         android:textAlignment="center"
                         android:textColor="#000000"
                         android:textSize="24sp"
