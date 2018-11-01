@@ -49,6 +49,10 @@
                 android:id="@+id/nav_contact_us"
                 android:icon="@drawable/ic_contact_phone_black_24dp"
                 android:title="Contact Us" />
+            <item
+                android:id="@+id/nav_queries"
+                android:icon="@drawable/ic_email_black_24dp"
+                android:title="Queries" />
         </menu>
     </item>
             <item android:title="Actions">
