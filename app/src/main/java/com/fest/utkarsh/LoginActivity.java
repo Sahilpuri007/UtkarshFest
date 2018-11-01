@@ -128,14 +128,14 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private void updateUI(FirebaseUser user) {
         //hideProgressDialog();
         if (user != null) {
-            Toast.makeText(mContext, "user sign in", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(mContext, "user sign in", Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             LoginActivity.this.startActivity(intent);
             LoginActivity.this.finish();
 
         } else {
-            Toast.makeText(mContext, "not sign in", Toast.LENGTH_SHORT).show();
+           // Toast.makeText(mContext, "not sign in", Toast.LENGTH_SHORT).show();
             new SharedPrefManager(mContext).clear();
         }
     }

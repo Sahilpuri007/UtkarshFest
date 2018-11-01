@@ -1,5 +1,8 @@
 package com.fest.utkarsh;
 
+import android.content.Context;
+import android.content.DialogInterface;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -38,7 +41,7 @@ public class RegEventActivity extends AppCompatActivity {
     String categoryls[] = {"Cultural", "Dexteria", "Atlantus"};
     String eventcul[] = {"Dharhohar", "Footloose", "Dramaturgy", "Asthetica", "Dance Off", "Rampage", "Debate", "Drawing/Painting"};
     String eventdex[] = {"Quibble", "Design X", "Winshoot", "Google Hunt", "Web Weaver", "Problematic"};
-    String eventatl[] = {"CS 1.6", "CS Go", "Tekken", "NFS", "FIFA", "Mario Mod", "Chrome Run"};//check for more
+    String eventatl[] = {"CS 1.6", "CS Go", "Tekken", "NFS", "FIFA", "Mario Mod", "Chrome Run","PUBG"};//check for more
     String s[] = {"Single"};
     String sd[] = {"Single", "Double"};
     String g[] = {"Group"};
@@ -95,7 +98,7 @@ public class RegEventActivity extends AppCompatActivity {
                     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                         String event = spinEvent.getSelectedItem().toString();
 
-                        if (event.equals("Dharhohar") || event.equals("Footloose") || event.equals("Dramaturgy") || event.equals("Asthetica")  || event.equals("CS 1.6") || event.equals("CS Go")) {
+                        if (event.equals("Dharhohar") || event.equals("Footloose") || event.equals("Dramaturgy") || event.equals("Asthetica")  || event.equals("CS 1.6") || event.equals("CS Go") ||event.equals("CS Go"))  {
                             ArrayAdapter memadp = new ArrayAdapter(getApplicationContext(), R.layout.support_simple_spinner_dropdown_item, g);
                             spinMem.setAdapter(memadp);
                         }
@@ -133,11 +136,11 @@ public class RegEventActivity extends AppCompatActivity {
                 Console.Log("BTN REG EVENT", "Clicked or not");
                 if(validate()==false)
                 {
-                    Console.Toast(getApplicationContext(), "Not Valid");
+                    //Console.Toast(getApplicationContext(), "Not Valid");
                 }
                 else
                 {
-                    Console.Toast(getApplicationContext(), "Valid");
+                    //Console.Toast(getApplicationContext(), "Valid");
                     //Console.Toast(getActivity().getApplicationContext(),name+"");
                     register();
                 }
@@ -147,13 +150,13 @@ public class RegEventActivity extends AppCompatActivity {
         });
     }
     private void register() {
-        Console.Toast(getApplicationContext(),"called");
+       // Console.Toast(getApplicationContext(),"called");
         String name = txtname.getText().toString();
         String email = txtemail.getText().toString();
         String college = txtclgname.getText().toString();
         String phone = txtphone.getText().toString();
         Event event =new Event();
-
+        //int toastDuration= 10000;
         event.setName(name);
         event.setEmail(email);
         event.setCollege(college);
@@ -163,17 +166,20 @@ public class RegEventActivity extends AppCompatActivity {
         event.setMember(spinMem.getSelectedItem().toString());
         String data = event.postData();
         Data d = new Data();
-        Console.Toast(getApplicationContext()," "+data);
+        //Console.Toast(getApplicationContext()," "+data);
         int ret = d.insert(getParent(),data,"regevent.php");
-        Console.Toast(getApplicationContext()," "+ret);
+       //Console.Toast(getApplicationContext()," "+ret);
         if(ret == 0)
         {
+            //success("UTKARSH REGISTRATIONS","Event Registered Succesfully");
+            //Toast.makeText(getApplicationContext(),"Event Registered Succesfully",Toast.).show();
             Console.Toast(getApplicationContext(),"Event Registered Succesfully");
-            //Intent intent = new Intent(getActivity(), DrawerMain.class);//set Class here!!!!!!!!
-            //startActivity(intent);
+            Intent intent = new Intent(getApplicationContext(),HomeActivity.class);//set Class here!!!!!!!!
+            startActivity(intent);
         }
         else if (ret == 1) {
-            Console.Toast(getApplicationContext(), "Event Registeration Unsuccesfully. Check all the details and try again!!");
+            //unsuccess("UTKARSH REGISTRATIONS","Event Registeration Unsuccesfully.");
+            Console.Toast(getApplicationContext(), "Event Registeration Unsuccesfull. Check all the details and try again!!");
         }
 
 
@@ -233,6 +239,42 @@ public class RegEventActivity extends AppCompatActivity {
         onBackPressed();
         // or call onBackPressed()
         return true;
+    }
+
+
+    public void success(String title,String message)
+    {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setIcon(R.drawable.ic_abcd);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Intent intent = new Intent(getApplicationContext(),HomeActivity.class);//set Class here!!!!!!!!
+                startActivity(intent);
+            }
+        });
+    }
+
+    public void unsuccess(String title,String message){
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setIcon(R.drawable.ic_abcd);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                mess();
+            }
+        });
+
+
+
+    }
+
+    private void mess() {
+        Console.Toast(getApplicationContext(),"Check all the details and try again!!");
     }
 
 }

@@ -26,6 +26,7 @@ import com.fest.utkarsh.fragments.ContactUs;
 import com.fest.utkarsh.fragments.EventsFragment;
 import com.fest.utkarsh.fragments.FbFragment;
 import com.fest.utkarsh.fragments.HomeFragment;
+import com.fest.utkarsh.fragments.Queries;
 import com.fest.utkarsh.fragments.SpecialEvents;
 import com.fest.utkarsh.fragments.WebsiteFragment;
 import com.fest.utkarsh.utils.SharedPrefManager;
@@ -166,6 +167,10 @@ public class HomeActivity extends AppCompatActivity
         else if (id == R.id.nav_about_us) {
             fragment=new AboutUs();
         }
+        else if (id == R.id.nav_queries) {
+            fragment=new Queries();
+        }
+
         else if (id == R.id.nav_contact_us) {
             fragment=new ContactUs();
         }else if (id == R.id.nav_sign_out) {

@@ -12,4 +12,5 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="error_player">There was an error initializing the YouTubePlayer (%1$s)</string>
     <string name="about_app">This Utkarsh App was developed as a Minor Project in 7th Semester of B.Tech CSE by </string>
+    <string name="queries">Hello user. If you Face any Problem or Have a query about reporting of bugs in this app. Feel Free to reach out to us at  fest.utkarsh@gmail.com . We will respond to you as soon as possible. We hope you will also appreciate us. Thank You</string>
 </resources>

@@ -207,7 +207,7 @@
                 android:layout_gravity="center_vertical"
                 android:layout_marginTop="6dp"
                 android:fontFamily="casual"
-                android:text="Jatin, Akshay, Suman."
+                android:text="Jatin Sharma, Akshay Kumar, Suman Mishra."
                 android:textAlignment="center"
                 android:textColor="@color/navigationBarColor"
                 android:textSize="24sp"
