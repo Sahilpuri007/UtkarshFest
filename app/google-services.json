@@ -15,11 +15,35 @@
       },
       "oauth_client": [
         {
-          "client_id": "958724188463-rib5ulpm1stivhkqvoo94g3c5bvsu47e.apps.googleusercontent.com",
+          "client_id": "958724188463-n0or5t7n7b72fiajg6o4o5olj78pussp.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.fest.utkarsh",
-            "certificate_hash": "0a02c8866dfbbbb3c7097c3c5c4457ecf8cea917"
+            "certificate_hash": "4b79b08cde8f36c0872b065eb274a9d4565e8411"
+          }
+        },
+        {
+          "client_id": "958724188463-d596ckbcmfhcakqbkingbh6mmla6jmp0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fest.utkarsh",
+            "certificate_hash": "4c03fe49b661affe9e9222f0fdf314e11510550a"
+          }
+        },
+        {
+          "client_id": "958724188463-lir3lbf26fri46mnqpm9i2atb0nrkjl2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fest.utkarsh",
+            "certificate_hash": "2ea70566bd4d9d84097933c0919ebcd404f79256"
+          }
+        },
+        {
+          "client_id": "958724188463-fpkbrj7f6h13o92jv5653t2tdeg50neu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fest.utkarsh",
+            "certificate_hash": "5dd9b6b764b28a57a3b5374f9e6b54b31dc13a79"
           }
         },
         {
@@ -41,20 +65,13 @@
         }
       ],
       "services": {
-        "analytics_service": {
-          "status": 1
-        },
         "appinvite_service": {
-          "status": 2,
           "other_platform_oauth_client": [
             {
               "client_id": "958724188463-93rdgvtamh847kdnio9d1b0nbl6aocpn.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
-        },
-        "ads_service": {
-          "status": 2
         }
       }
     }
